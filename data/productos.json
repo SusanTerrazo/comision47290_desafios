@@ -1,0 +1,35 @@
+[
+  {
+    "title": "libro",
+    "description": "Editorial andaluz, contiene 500 relatos",
+    "price": 200,
+    "code": "abc123",
+    "stock": 25,
+    "id": 1,
+    "category": "lecturas",
+    "thumbnails": [],
+    "status": true
+  },
+  {
+    "status": true,
+    "thumbnails": [],
+    "title": "producto prueba 3",
+    "description": "Este es un producto prueba 3",
+    "price": 200,
+    "code": "abc160",
+    "stock": 150,
+    "category": "Pruebas",
+    "id": 8
+  },
+  {
+    "id": 9,
+    "title": "tijeras",
+    "description": "Marca faber castell",
+    "price": 15,
+    "code": "abc180",
+    "stock": 100,
+    "category": "Utiles",
+    "status": true,
+    "thumbnails": []
+  }
+]
