@@ -1,0 +1,19 @@
+<div class="container">
+    Esta es la lista de productos
+    <table class="table table-striped">
+        <thead>
+            <td>Producto</td>
+            <td>Precio</td>
+            <td>Stock</td>
+            <td>Categoria</td>
+        </thead>
+        {{#each productos}}
+        <tr>
+            <td>{{this.title}}</td>
+            <td>{{this.price}}</td>
+            <td>{{this.stock}}</td>
+            <td>{{this.category}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
