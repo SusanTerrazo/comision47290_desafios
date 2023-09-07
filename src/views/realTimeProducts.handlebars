@@ -1,3 +1,57 @@
-<div></div>
+<div class="container">
+    <h1>FORMULARIO DE INGRESO DE PRODUCTOS</h1>
+    <div>
+        Registra tu producto
+    </div>
+    <form id="formulario">
+        <div class="mb-2">
+            <label for="">tittle:</label> <input type="text" id="tittle">
+        </div>
+        <div class="mb-3">
+            <label for="">description:</label> <input type="text" id="description">
+        </div>
+        <div class="mb-3">
+            <label for="">price:</label> <input type="text" id="price">
+        </div>
+        <div class="mb-3">
+            <label for="">code:</label> <input type="text" id="code">
+        </div>
+        <div class="mb-3">
+            <label for="">stock:</label> <input type="text" id="stock">
+        </div>
+        <div class="mb-3">
+            <label for="">category:</label> <input type="text" id="category">
+        </div>
+    </form>
+    <button id="crearProducto" class="btn btn-primary" type="button">Agregar producto</button>
+</div>
+
+<hr />
+<div class="container"><strong>Esta es la lista de productos</strong>
+    
+    <table id="tablaRealTimeProductos" class="table table-striped">
+        <thead>
+            <td><strong>Producto</strong></td>
+            <td><strong>Descripción</strong></td>
+            <td><strong>Precio</strong></td>
+            <td><strong>Código</strong></td>
+            <td><strong>Stock</strong></td>
+            <td><strong>Categoria</strong></td>
+        </thead>
+        <tbody>
+        {{#each productos}}
+        <tr>
+            <td>{{this.title}}</td>
+            <td>{{this.description}}</td>
+            <td>{{this.price}}</td>
+            <td>{{this.code}}</td>
+            <td>{{this.stock}}</td>
+            <td>{{this.category}}</td>
+            <td><button class="btn btn-danger" type="button" onclick="eliminarProducto({{this.id}})">Eliminar</button></td>
+        </tr>
+        {{/each}}    
+        </tbody>
+    </table>
+</div>
 <script src="/socket.io/socket.io.js"></script>
 <script src="index.js"></script>
