@@ -16,6 +16,9 @@ app.use(express.json())
 
 
 //===================================== rutas =============================================
+app.get('/', (req, res) => {
+    res.send('BIENVENIDO A LA APLICACION CON WEBSOCKET')
+})
 app.use('/', viewRouter )
 app.use(express.static('./src/public'))
 app.use('/api/products', productRouter) 
@@ -27,5 +30,6 @@ const socketServer = new Server(httpServer)
 socketServer.on("connection", socket => {
     socket.on('listaProductos', data => {
         socketServer.emit('productosActualizados', data)
+        console.log(data)
     })
 })

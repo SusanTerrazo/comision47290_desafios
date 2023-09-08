@@ -39,7 +39,8 @@ router.delete('/:pid', async (req, res) => {
     
     const result = await productManager.deleteProduct(id)
     if (typeof result == 'string') return res.status(404).json({status: 'error', error: result.slice(6) })
-    res.status(200).json( {status: 'succes', payload: 'Producto eliminado'} )
+    const updateProducts = await productManager.getProduct()
+    res.status(200).json( {status: 'succes', payload: updateProducts} )
 })
 
 export default router
