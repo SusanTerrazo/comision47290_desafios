@@ -19,4 +19,11 @@ router.get('/realtimeproducts', async (req, res )=>{
     res.render('realTimeProducts', {productos})
 })
 
+router.post('/', async (req, res) => {
+    const productnew = req.body
+    const productGenerated = new productsModel(productnew)
+    await productGenerated.save()
+    res.redirect('/')
+}) 
+
 export default router

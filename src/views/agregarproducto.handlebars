@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>FORMULARIO DE INGRESO DE PRODUCTOS</h1>
+    <div>
+        Registra tu producto
+    </div>
+    <form  action="/api/products" method="post" >
+        <div class="mb-2">
+            <label for="">tittle:</label> <input type="text" name="title">
+        </div>
+        <div class="mb-3">
+            <label for="">description:</label> <input type="text" name="description">
+        </div>
+        <div class="mb-3">
+            <label for="">price:</label> <input type="text" name="price">
+        </div>
+        <div class="mb-3">
+            <label for="">code:</label> <input type="text" name="code">
+        </div>
+        <div class="mb-3">
+            <label for="">stock:</label> <input type="text" name="stock">
+        </div>
+        <div class="mb-3">
+            <label for="">category:</label> <input type="text" name="category">
+        </div>
+    <button class="btn btn-primary" type="submmit">Agregar producto</button>
+    </form>
+    
+</div>

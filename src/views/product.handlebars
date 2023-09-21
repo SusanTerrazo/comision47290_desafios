@@ -1,0 +1,31 @@
+<div class="container">
+    <h1>Mostrando 1 producto</h1>
+    <table class="table table-striped">
+        {{#each product}}
+        <tr>
+            <td><strong>Producto</strong></td>
+            <td>{{this.title}}</td>
+        </tr>
+        <tr>
+            <td><strong>Descripción</strong></td>
+            <td>{{this.description}}</td>
+        </tr>
+        <tr>
+            <td><strong>Precio</strong></td>
+            <td>{{this.price}}</td>
+        </tr>
+        <tr>
+            <td><strong>Código</strong></td>
+            <td>{{this.code}}</td>
+        </tr>
+        <tr>
+            <td><strong>Stock</strong></td>
+            <td>{{this.stock}}</td>
+        </tr>
+        <tr>
+            <td><strong>Categoria</strong></td>
+            <td>{{this.category}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
